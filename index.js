@@ -70,7 +70,7 @@ Concentrate.prototype.write_buffer = function write_buffer(job, buffer, offset) 
 };
 
 Concentrate.prototype.buffer = function buffer(data) {
-  this.jobs.push({type: "buffer", data: data, length: data.length});
+  this.jobs.push({type: "buffer", data: data, length: data.byteLength || data.length});
   return this;
 };
 
